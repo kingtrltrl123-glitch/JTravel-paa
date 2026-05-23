@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../../lib/LanguageContext";
 import { searchMultiModalRoute, searchStations } from "@/lib/trainApi";
 
 export default function TrainPage() {

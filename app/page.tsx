@@ -2,17 +2,21 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "../lib/LanguageContext";
+import { translations } from "../lib/translations";
 
 export default function Home() {
     const [destination, setDestination] = useState("");
+    const { language } = useLanguage();
+    const t = translations[language];
 
     const popularCities = [
-        { name: "Tokyo", slug: "tokyo", description: "Modern metropolis with ancient temples", image: "🗼" },
-        { name: "Osaka", slug: "osaka", description: "Street food and entertainment capital", image: "🏯" },
-        { name: "Kyoto", slug: "kyoto", description: "Traditional culture and temples", image: "⛩️" },
-        { name: "Hokkaido", slug: "hokkaido", description: "Snow festival and nature", image: "❄️" },
-        { name: "Okinawa", slug: "okinawa", description: "Tropical beaches and unique culture", image: "🏖️" },
-        { name: "Hiroshima", slug: "hiroshima", description: "Peace memorial and oysters", image: "🕊️" },
+        { name: "Tokyo", slug: "tokyo", image: "🗼", cityKey: "tokyo" },
+        { name: "Osaka", slug: "osaka", image: "🏯", cityKey: "osaka" },
+        { name: "Kyoto", slug: "kyoto", image: "⛩", cityKey: "kyoto" },
+        { name: "Hokkaido", slug: "hokkaido", image: "❄️", cityKey: "hokkaido" },
+        { name: "Okinawa", slug: "okinawa", image: "🏖", cityKey: "okinawa" },
+        { name: "Hiroshima", slug: "hiroshima", image: "🕊", cityKey: "hiroshima" },
     ];
 
     const handleSearch = () => {
@@ -38,14 +42,14 @@ export default function Home() {
                             marginBottom: "10px",
                             letterSpacing: "-0.02em"
                         }}>
-                            JTravel
+                            {t.app.title}
                         </h1>
                         <p style={{
                             fontSize: "1.1rem",
                             color: "rgba(255,255,255,0.9)",
                             letterSpacing: "0.5px"
                         }}>
-                            by student developer
+                            {t.app.title}
                         </p>
                     </div>
 
@@ -53,7 +57,7 @@ export default function Home() {
                     <div style={{ display: "flex", maxWidth: "550px", margin: "30px auto 0", gap: "12px" }}>
                         <input
                             type="text"
-                            placeholder="Search a city... (Tokyo, Osaka, Kyoto)"
+                            placeholder={t.searchPlaceholder}
                             value={destination}
                             onChange={(e) => setDestination(e.target.value)}
                             onKeyPress={(e) => e.key === "Enter" && handleSearch()}
@@ -97,7 +101,7 @@ export default function Home() {
 
                 {/* Popular Cities */}
                 <h2 style={{ color: "white", textAlign: "center", marginBottom: "40px", fontSize: "1.8rem", fontWeight: "600" }}>
-                    [5/22/2026 11:36 PM] Zaw Linn Naing: ✨ Popular Destinations
+                    {t.popularTitle}
                 </h2>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "25px" }}>
                     {popularCities.map((city) => (
@@ -121,8 +125,8 @@ export default function Home() {
                                 }}>
                                 <div style={{ fontSize: "48px", marginBottom: "15px" }}>{city.image}</div>
                                 <h3 style={{ color: "#333", marginBottom: "10px", fontSize: "1.5rem" }}>{city.name}</h3>
-                                <p style={{ color: "#666", marginBottom: "15px" }}>{city.description}</p>
-                                <span style={{ display: "inline-block", color: "#667eea", fontWeight: "bold" }}>Explore →</span>
+                                <p style={{ color: "#666", marginBottom: "15px" }}>{t.cities[city.cityKey as keyof typeof t.cities]}</p>
+                                <span style={{ display: "inline-block", color: "#667eea", fontWeight: "bold" }}>{t.explore}</span>
                             </div>
                         </Link>
                     ))}
@@ -150,8 +154,8 @@ export default function Home() {
                                 e.currentTarget.style.transform = "scale(1)";
                             }}>
                             <div style={{ fontSize: "40px", marginBottom: "10px" }}>🚆</div>
-                            <h3>Train Crowdedness</h3>
-                            <p style={{ opacity: 0.9, marginTop: "8px" }}>Know before you ride • Avoid rush hour</p>
+                            <h3>{t.trainTitle}</h3>
+                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.trainDesc}</p>
                         </div>
                     </Link>
                     <Link href="/food" style={{ textDecoration: "none" }}>
@@ -174,8 +178,8 @@ export default function Home() {
                                 e.currentTarget.style.transform = "scale(1)";
                             }}>
                             <div style={{ fontSize: "40px", marginBottom: "10px" }}>🍜</div>
-                            <h3>Food Recommendations</h3>
-                            <p style={{ opacity: 0.9, marginTop: "8px" }}>Must-eat local dishes • Restaurant tips</p>
+                            <h3>{t.foodTitle}</h3>
+                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.foodDesc}</p>
                         </div>
                     </Link>
                 </div>

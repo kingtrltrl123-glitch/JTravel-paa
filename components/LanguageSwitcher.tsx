@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useLanguage } from "@/app/context/LanguageContext";
+import { useLanguage } from "../lib/LanguageContext";
 
 export default function LanguageSwitcher() {
     const { language, setLanguage } = useLanguage();
@@ -10,7 +10,7 @@ export default function LanguageSwitcher() {
     const languages = [
         { code: "en", name: "English", flag: "🇬🇧" },
         { code: "my", name: "မြန်မာ", flag: "🇲🇲" },
-        { code: "jp", name: "日本語", flag: "🇯🇵" },
+        { code: "ja", name: "日本語", flag: "🇯🇵" },
         { code: "ko", name: "한국어", flag: "🇰🇷" },
         { code: "zh", name: "中文", flag: "🇨🇳" },
     ];
