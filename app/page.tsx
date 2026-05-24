@@ -49,7 +49,6 @@ export default function Home() {
                             color: "rgba(255,255,255,0.9)",
                             letterSpacing: "0.5px"
                         }}>
-                            {t.app.title}
                         </p>
                     </div>
 
