@@ -11,12 +11,12 @@ export default function Home() {
     const t = translations[language];
 
     const popularCities = [
-        { name: "Tokyo", slug: "tokyo", image: "🗼", cityKey: "tokyo" },
-        { name: "Osaka", slug: "osaka", image: "🏯", cityKey: "osaka" },
-        { name: "Kyoto", slug: "kyoto", image: "⛩", cityKey: "kyoto" },
-        { name: "Hokkaido", slug: "hokkaido", image: "❄️", cityKey: "hokkaido" },
-        { name: "Okinawa", slug: "okinawa", image: "🏖", cityKey: "okinawa" },
-        { name: "Hiroshima", slug: "hiroshima", image: "🕊", cityKey: "hiroshima" },
+        { name: "Tokyo", slug: "tokyo", image: "/images/tokyo.jpg", cityKey: "tokyo" },
+        { name: "Osaka", slug: "osaka", image: "/images/osaka.jpg", cityKey: "osaka" },
+        { name: "Kyoto", slug: "kyoto", image: "/images/kyoto.jpg", cityKey: "kyoto" },
+        { name: "Hokkaido", slug: "hokkaido", image: "/images/hokkaido.jpg", cityKey: "hokkaido" },
+        { name: "Okinawa", slug: "okinawa", image: "/images/okinawa.jpg", cityKey: "okinawa" },
+        { name: "Hiroshima", slug: "hiroshima", image: "/images/hiroshima.jpg", cityKey: "hiroshima" },
     ];
 
     const handleSearch = () => {
@@ -123,7 +123,17 @@ export default function Home() {
                                     e.currentTarget.style.transform = "translateY(0)";
                                     e.currentTarget.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
                                 }}>
-                                <div style={{ fontSize: "48px", marginBottom: "15px" }}>{city.image}</div>
+                                <img
+                                    src={city.image}
+                                    alt={city.name}
+                                    style={{
+                                        width: "100%",
+                                        height: "180px",
+                                        objectFit: "cover",
+                                        borderRadius: "12px",
+                                        marginBottom: "15px"
+                                    }}
+                                />
                                 <h3 style={{ color: "#333", marginBottom: "10px", fontSize: "1.5rem" }}>{city.name}</h3>
                                 <p style={{ color: "#666", marginBottom: "15px" }}>{t.cities[city.cityKey as keyof typeof t.cities]}</p>
                                 <span style={{ display: "inline-block", color: "#667eea", fontWeight: "bold" }}>{t.explore}</span>
