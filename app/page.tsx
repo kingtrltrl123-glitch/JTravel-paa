@@ -154,8 +154,8 @@ export default function Home() {
                                 e.currentTarget.style.transform = "scale(1)";
                             }}>
                             <div style={{ fontSize: "40px", marginBottom: "10px" }}>🚆</div>
-                            <h3>{t.trainTitle}</h3>
-                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.trainDesc}</p>
+                            <h3>{t.homeTrain.title}</h3>
+                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.homeTrain.desc}</p>
                         </div>
                     </Link>
                     <Link href="/food" style={{ textDecoration: "none" }}>
@@ -178,8 +178,8 @@ export default function Home() {
                                 e.currentTarget.style.transform = "scale(1)";
                             }}>
                             <div style={{ fontSize: "40px", marginBottom: "10px" }}>🍜</div>
-                            <h3>{t.foodTitle}</h3>
-                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.foodDesc}</p>
+                            <h3>{t.homeFood.title}</h3>
+                            <p style={{ opacity: 0.9, marginTop: "8px" }}>{t.homeFood.desc}</p>
                         </div>
                     </Link>
                 </div>

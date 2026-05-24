@@ -1,20 +1,12 @@
 export const translations = {
     en: {
-        app: {
-            title: "JTravel"
-        },
-        nav: {
-            home: "Home",
-            train: "Train",
-            food: "Food"
-        },
+        app: { title: "JTravel" },
+        nav: { home: "Home", train: "Train", food: "Food" },
         searchPlaceholder: "Search a city... (Tokyo, Osaka, Kyoto)",
         popularTitle: "✨ Popular Destinations",
         explore: "Explore →",
-        trainTitle: "Train Crowdedness",
-        trainDesc: "Know before you ride • Avoid rush hour",
-        foodTitle: "Food Recommendations",
-        foodDesc: "Must-eat local dishes • Restaurant tips",
+        homeTrain: { title: "Train Crowdedness", desc: "Know before you ride • Avoid rush hour" },
+        homeFood: { title: "Food Recommendations", desc: "Must-eat local dishes • Restaurant tips" },
         cities: {
             tokyo: "Modern metropolis with ancient temples",
             osaka: "Street food and entertainment capital",
@@ -22,24 +14,31 @@ export const translations = {
             hokkaido: "Snow festival and nature",
             okinawa: "Tropical beaches and unique culture",
             hiroshima: "Peace memorial and oysters"
+        },
+        train: {
+            title: "🚆 Japan Train Guide",
+            subtitle: "Find routes and stations across Japan",
+            route_search: "Route Search",
+            from: "From", to: "To", search: "Search", loading: "Loading...",
+            station_search: "Station Search",
+            station_placeholder: "Search station name...",
+            route_found: "Route found! Opening in new tab",
+            duration: "Duration", fare: "Fare", transfers: "Transfers",
+            no_stations: "No stations found",
+            powered_by: "Powered by HyperDia API",
+            error_empty: "Please enter both stations",
+            error_not_found: "Route not found",
+            error_api: "API error, please try again",
         }
     },
     my: {
-        app: {
-            title: "ဂျေထရာဗဲလ်"
-        },
-        nav: {
-            home: "ပင်မ",
-            train: "ရထား",
-            food: "အစားအသောက်"
-        },
+        app: { title: "ဂျေထရာဗဲလ်" },
+        nav: { home: "ပင်မ", train: "ရထား", food: "အစားအသောက်" },
         searchPlaceholder: "မြို့ရှာရန်... (တိုကျို၊ အိုဆာကာ၊ ကျိုတို)",
         popularTitle: "✨ လူကြိုက်များသော နေရာများ",
         explore: "လေ့လာရန် →",
-        trainTitle: "ရထား လူပြည့်သည့်အချိန်",
-        trainDesc: "မစီးခင် သိထားရမည့်အချက်များ • အလုပ်အချိန်ရှောင်ပါ",
-        foodTitle: "အစားအသောက် အကြံပြုချက်များ",
-        foodDesc: "စားရမည့် ဒေသအစားအစာများ • စားသောက်ဆိုင် အကြံပြုချက်များ",
+        homeTrain: { title: "ရထား လူပြည့်သည့်အချိန်", desc: "မစီးခင် သိထားရမည့်အချက်များ • အလုပ်အချိန်ရှောင်ပါ" },
+        homeFood: { title: "အစားအသောက် အကြံပြုချက်များ", desc: "စားရမည့် ဒေသအစားအစာများ • စားသောက်ဆိုင် အကြံပြုချက်များ" },
         cities: {
             tokyo: "ခေတ်မီမြို့တော်နှင့် ရှေးဟောင်းဘုရားကျောင်းများ",
             osaka: "လမ်းဘေးအစားအစာနှင့် ဖျော်ဖြေရေးမြို့တော်",
@@ -47,24 +46,31 @@ export const translations = {
             hokkaido: "ဆီးနှင်းပွဲတော်နှင့် သဘာဝ",
             okinawa: "အပူပိုင်းကမ်းခြေများနှင့် ထူးခြားယဉ်ကျေးမှု",
             hiroshima: "ငြိမ်းချမ်းရေးအမှတ်တရနှင့် ကမာကောင်များ"
+        },
+        train: {
+            title: "🚆 ဂျပန် ရထားလမ်းညွှန်",
+            subtitle: "ဂျပန်တစ်ဝှမ်း လမ်းကြောင်းနှင့် ဘူတာရုံများ ရှာဖွေပါ",
+            route_search: "လမ်းကြောင်းရှာဖွေရန်",
+            from: "မှ", to: "သို့", search: "ရှာဖွေ", loading: "ခဏစောင့်ပါ...",
+            station_search: "ဘူတာရုံရှာဖွေရန်",
+            station_placeholder: "ဘူတာရုံအမည် ရှာပါ...",
+            route_found: "လမ်းကြောင်းတွေ့ပြီ!",
+            duration: "ကြာချိန်", fare: "ခရီးစရိတ်", transfers: "ပြောင်းစီးရမည့်အကြိမ်",
+            no_stations: "ဘူတာရုံ မတွေ့ပါ",
+            powered_by: "HyperDia API ဖြင့် မောင်းနှင်သည်",
+            error_empty: "ဘူတာရုံ နှစ်ခုလုံး ထည့်ပါ",
+            error_not_found: "လမ်းကြောင်း မတွေ့ပါ",
+            error_api: "API အမှား၊ ထပ်ကြိုးစားပါ",
         }
     },
     ja: {
-        app: {
-            title: "Jトラベル"
-        },
-        nav: {
-            home: "ホーム",
-            train: "電車",
-            food: "食べ物"
-        },
+        app: { title: "Jトラベル" },
+        nav: { home: "ホーム", train: "電車", food: "食べ物" },
         searchPlaceholder: "都市を検索... (東京、大阪、京都)",
         popularTitle: "✨ 人気の目的地",
         explore: "探索する →",
-        trainTitle: "電車の混雑状況",
-        trainDesc: "乗る前に知っておくこと • ラッシュアワーを避ける",
-        foodTitle: "食べ物のおすすめ",
-        foodDesc: "必食の郷土料理 • レストランのヒント",
+        homeTrain: { title: "電車の混雑状況", desc: "乗る前に知っておくこと • ラッシュアワーを避ける" },
+        homeFood: { title: "食べ物のおすすめ", desc: "必食の郷土料理 • レストランのヒント" },
         cities: {
             tokyo: "近代的な大都市と古代の寺院",
             osaka: "屋台グルメとエンターテイメントの中心地",
@@ -72,24 +78,31 @@ export const translations = {
             hokkaido: "雪祭りと自然",
             okinawa: "熱帯のビーチとユニークな文化",
             hiroshima: "平和記念公園と牡蠣"
+        },
+        train: {
+            title: "🚆 日本電車ガイド",
+            subtitle: "日本全国の路線と駅を検索",
+            route_search: "ルート検索",
+            from: "出発駅", to: "到着駅", search: "検索", loading: "読み込み中...",
+            station_search: "駅検索",
+            station_placeholder: "駅名を検索...",
+            route_found: "ルートが見つかりました！",
+            duration: "所要時間", fare: "運賃", transfers: "乗り換え回数",
+            no_stations: "駅が見つかりません",
+            powered_by: "HyperDia API を使用",
+            error_empty: "出発駅と到着駅を入力してください",
+            error_not_found: "ルートが見つかりません",
+            error_api: "APIエラー、もう一度お試しください",
         }
     },
     zh: {
-        app: {
-            title: "J旅行"
-        },
-        nav: {
-            home: "首页",
-            train: "火车",
-            food: "美食"
-        },
+        app: { title: "J旅行" },
+        nav: { home: "首页", train: "火车", food: "美食" },
         searchPlaceholder: "搜索城市... (东京、大阪、京都)",
         popularTitle: "✨ 热门目的地",
         explore: "探索 →",
-        trainTitle: "火车拥挤度",
-        trainDesc: "乘车前须知 • 避开高峰时段",
-        foodTitle: "美食推荐",
-        foodDesc: "必吃当地美食 • 餐厅小贴士",
+        homeTrain: { title: "火车拥挤度", desc: "乘车前须知 • 避开高峰时段" },
+        homeFood: { title: "美食推荐", desc: "必吃当地美食 • 餐厅小贴士" },
         cities: {
             tokyo: "现代大都市与古老寺庙",
             osaka: "街头美食和娱乐之都",
@@ -97,24 +110,31 @@ export const translations = {
             hokkaido: "雪节与自然",
             okinawa: "热带海滩与独特文化",
             hiroshima: "和平纪念与牡蛎"
+        },
+        train: {
+            title: "🚆 日本火车指南",
+            subtitle: "搜索日本各地路线和车站",
+            route_search: "路线搜索",
+            from: "出发站", to: "到达站", search: "搜索", loading: "加载中...",
+            station_search: "车站搜索",
+            station_placeholder: "搜索车站名称...",
+            route_found: "找到路线！",
+            duration: "时长", fare: "票价", transfers: "换乘次数",
+            no_stations: "未找到车站",
+            powered_by: "由 HyperDia API 提供支持",
+            error_empty: "请输入出发站和到达站",
+            error_not_found: "未找到路线",
+            error_api: "API错误，请重试",
         }
     },
     ko: {
-        app: {
-            title: "J트래블"
-        },
-        nav: {
-            home: "홈",
-            train: "기차",
-            food: "음식"
-        },
+        app: { title: "J트래블" },
+        nav: { home: "홈", train: "기차", food: "음식" },
         searchPlaceholder: "도시 검색... (도쿄, 오사카, 교토)",
         popularTitle: "✨ 인기 여행지",
         explore: "탐험하기 →",
-        trainTitle: "기차 혼잡도",
-        trainDesc: "타기 전에 알아두기 • 러시아워 피하기",
-        foodTitle: "음식 추천",
-        foodDesc: "꼭 먹어봐야 할 현지 음식 • 레스토랑 팁",
+        homeTrain: { title: "기차 혼잡도", desc: "타기 전에 알아두기 • 러시아워 피하기" },
+        homeFood: { title: "음식 추천", desc: "꼭 먹어봐야 할 현지 음식 • 레스토랑 팁" },
         cities: {
             tokyo: "현대적인 대도시와 고대 사원",
             osaka: "길거리 음식과 엔터테인먼트의 수도",
@@ -122,6 +142,21 @@ export const translations = {
             hokkaido: "눈 축제와 자연",
             okinawa: "열대 해변과 독특한 문화",
             hiroshima: "평화 기념관과 굴"
+        },
+        train: {
+            title: "🚆 일본 기차 가이드",
+            subtitle: "일본 전국 노선과 역 검색",
+            route_search: "노선 검색",
+            from: "출발역", to: "도착역", search: "검색", loading: "로딩 중...",
+            station_search: "역 검색",
+            station_placeholder: "역 이름 검색...",
+            route_found: "노선을 찾았습니다!",
+            duration: "소요 시간", fare: "요금", transfers: "환승 횟수",
+            no_stations: "역을 찾을 수 없습니다",
+            powered_by: "HyperDia API 제공",
+            error_empty: "출발역과 도착역을 입력하세요",
+            error_not_found: "노선을 찾을 수 없습니다",
+            error_api: "API 오류, 다시 시도해 주세요",
         }
     }
 };

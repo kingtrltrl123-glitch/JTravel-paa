@@ -32,18 +32,18 @@ export default function Navbar() {
                     WebkitTextFillColor: 'transparent',
                     textDecoration: 'none'
                 }}>
-                    {t('app/title')}
+                    {t('app.title')}
                 </Link>
 
                 <div style={{ display: 'flex', gap: '25px', alignItems: 'center' }}>
                     <Link href="/" style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
-                        {t('home')}
+                        {t('nav.home')}
                     </Link>
                     <Link href="/train" style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
-                        {t('train')}
+                        {t('nav.train')}
                     </Link>
                     <Link href="/food" style={{ textDecoration: 'none', color: '#333', fontWeight: '500' }}>
-                        {t('food')}
+                        {t('nav.food')}
                     </Link>
                     <LanguageSwitcher />
                 </div>
