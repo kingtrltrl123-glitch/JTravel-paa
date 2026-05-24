@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "../lib/LanguageContext";
 import { translations } from "../lib/translations";
+import AIPlanner from "../components/AIPlanner";
 
 export default function Home() {
     const [destination, setDestination] = useState("");
@@ -139,6 +140,13 @@ export default function Home() {
                             </div>
                         </Link>
                     ))}
+                </div>
+                {/* AI Planner */}
+                <div style={{ marginTop: "60px" }}>
+                    <h2 style={{ color: "white", textAlign: "center", marginBottom: "30px", fontSize: "1.8rem", fontWeight: "600" }}>
+                        🤖 AI Travel Planner
+                    </h2>
+                    <AIPlanner />
                 </div>
 
                 {/* Quick Links - Train & Food */}
