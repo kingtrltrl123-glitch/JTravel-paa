@@ -6,6 +6,7 @@ export async function POST(request: Request) {
         const { destination, days, budget, travelStyle, language } = body;
 
         const apiKey = process.env.GROQ_API_KEY;
+        console.log("API Key:", apiKey?.substring(0, 10));
 
         const langInstruction = language === 'my' ? 'Respond in Burmese language.' :
             language === 'ja' ? 'Respond in Japanese language.' :
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
                     "Authorization": "Bearer " + apiKey,
                 },
                 body: JSON.stringify({
-                    model: "llama3-8b-8192",
+                    model: "llama-3.3-70b-versatile",
                     messages: [{ role: "user", content: prompt }],
                     temperature: 0.7,
                     max_tokens: 2048,
@@ -33,7 +34,7 @@ export async function POST(request: Request) {
         );
 
         const data = await res.json();
-        console.log("Groq response:", JSON.stringify(data).substring(0, 200));
+        console.log("Groq response:", JSON.stringify(data).substring(0, 300));
 
         if (!data.choices || data.choices.length === 0) {
             throw new Error("No response from Groq");
