@@ -52,7 +52,7 @@ export default function AIPlanner() {
     return (
         <div style={{ background: "white", borderRadius: "20px", padding: "30px", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
             <h2 style={{ marginBottom: "5px", color: "#333" }}>🤖 AI Travel Planner</h2>
-            <p style={{ color: "#666", marginBottom: "25px", fontSize: "14px" }}>Powered by Google Gemini AI</p>
+            <p style={{ color: "#666", marginBottom: "25px", fontSize: "14px" }}>Powered by Groq AI</p>
 
             {/* Destination */}
             <div style={{ marginBottom: "15px" }}>
